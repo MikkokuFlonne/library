@@ -8,10 +8,9 @@ if (isset($_POST['edit'])) {
 }
 if (isset($_POST['delete'])) {
     var_dump($_POST);
-    $delete = DB::query('DELETE FROM book WHERE id = :id', ["id"=> $_POST['delete']]);
-    $delete = DB::query('DELETE FROM writer_write_book WHERE book_id = :id', ["id"=> $_POST['delete']]);
+    $delete = DB::query('DELETE FROM book WHERE id = :id', ["id" => $_POST['delete']]);
+    $delete = DB::query('DELETE FROM writer_write_book WHERE book_id = :id', ["id" => $_POST['delete']]);
     header('Location: book_list.php');
-    
 }
 
 ?>
@@ -53,8 +52,8 @@ if (isset($_POST['delete'])) {
                 <td><?= $book->published_at ?></td>
                 <td>
                     <form action="" method="POST">
-                        <button name="edit" value="<?=$book->id?>">Modifier</button>
-                        <button name="delete" value="<?=$book->id?>">Supprimer</button>
+                        <button name="edit" value="<?= $book->id ?>">Modifier</button>
+                        <button name="delete" value="<?= $book->id ?>">Supprimer</button>
                     </form>
                 </td>
             </tr>

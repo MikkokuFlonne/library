@@ -19,5 +19,3 @@ echo $library->getBooksWrittenBefore(1990).'</br>';
 
  // Récupère un tableau avec les livres écrits par J. K. Rowling
 echo $library->getBooksWrittenBy('Rowling').'</br>';
-
-?>
