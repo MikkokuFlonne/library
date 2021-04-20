@@ -38,7 +38,7 @@ if(!empty($_POST)){
     if(empty($errors)){
         $query = DB::postQuery('INSERT INTO writer (firstname, lastname, birthday) VALUES (:firstname, :lastname, :birthday)', $_POST);
 
-        header('writer_add.php');
+        header('Location: writer_add.php');
     }
 }
 

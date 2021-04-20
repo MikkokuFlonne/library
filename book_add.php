@@ -37,7 +37,7 @@ if(!empty($_POST)){
 
     if(empty($errors)){
         $query = DB::postQuery('INSERT INTO book (title, kind, published_at) VALUES (:title, :kind, :published_at)', $_POST);
-        header('book_add.php');
+        header('Location: book_add.php');
     }
 }
 

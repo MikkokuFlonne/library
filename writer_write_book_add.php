@@ -46,7 +46,7 @@ if (!empty($_POST)) {
         }
         if (empty($error)) {
             $query = DB::postQuery('INSERT into writer_write_book (book_id, writer_id) VALUES (:book_id, :writer_id)', $_POST);
-            header('writer_write_book_add.php');
+            header('Location: writer_write_book_add.php');
         }
     }
 }
